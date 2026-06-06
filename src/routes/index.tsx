@@ -40,50 +40,44 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative h-screen w-full overflow-hidden bg-cream">
-        <div className="grid lg:grid-cols-12 h-full">
-          {/* Text — overlay on mobile, column on desktop */}
-          <div className="lg:col-span-5 lg:relative absolute inset-0 lg:inset-auto z-10 flex items-center px-6 lg:px-16 h-full">
-            {/* Mobile-only soft scrim for legibility */}
-            <div className="lg:hidden absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/50 to-transparent" />
-            <div className="relative max-w-md animate-fade-up">
-              <p className="eyebrow mb-6 lg:mb-8">Autumn Edit · 2026</p>
-              <h1 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-cocoa">
-                Beauty,
-                <br />
-                <em>Refined.</em>
-              </h1>
-              <p className="mt-6 lg:mt-8 text-base leading-relaxed text-cocoa/80 max-w-sm">
-                A curated maison of skincare, fragrance and quiet luxury — composed
-                slowly, made to last a lifetime.
-              </p>
-              <div className="mt-8 lg:mt-12 flex flex-wrap items-center gap-6">
-                <Link
-                  to="/products"
-                  className="group inline-flex items-center gap-3 bg-cocoa text-cream px-9 py-4 text-xs tracking-luxe uppercase hover:bg-clay transition-colors duration-500"
-                >
-                  Shop Collection
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.4} />
-                </Link>
-                <Link
-                  to="/products"
-                  className="luxe-link text-xs tracking-luxe uppercase text-cocoa"
-                >
-                  Explore Products
-                </Link>
-              </div>
+      <section className="relative h-screen w-full overflow-hidden bg-cocoa">
+        <img
+          src={heroImg}
+          alt="Luxury skincare composition"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-fade-in"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-cocoa/70 via-cocoa/30 to-transparent" />
+        <div className="relative h-full flex items-center px-6 lg:px-16">
+          <div className="max-w-xl animate-fade-up">
+            <p className="eyebrow mb-6 lg:mb-8 text-cream/80">Autumn Edit · 2026</p>
+            <h1 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-cream">
+              Beauty,
+              <br />
+              <em>Refined.</em>
+            </h1>
+            <p className="mt-6 lg:mt-8 text-base leading-relaxed text-cream/85 max-w-sm">
+              A curated maison of skincare, fragrance and quiet luxury — composed
+              slowly, made to last a lifetime.
+            </p>
+            <div className="mt-8 lg:mt-12 flex flex-wrap items-center gap-6">
+              <Link
+                to="/products"
+                className="group inline-flex items-center gap-3 bg-cream text-cocoa px-9 py-4 text-xs tracking-luxe uppercase hover:bg-sand transition-colors duration-500"
+              >
+                Shop Collection
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.4} />
+              </Link>
+              <Link
+                to="/products"
+                className="luxe-link text-xs tracking-luxe uppercase text-cream"
+              >
+                Explore Products
+              </Link>
             </div>
-          </div>
-          {/* Image — full bleed on mobile, right column on desktop */}
-          <div className="lg:col-span-7 absolute inset-0 lg:relative lg:inset-auto h-full">
-            <img
-              src={heroImg}
-              alt="Luxury skincare composition"
-              className="w-full h-full object-cover animate-fade-in"
-            />
           </div>
         </div>
       </section>
+
 
 
 
