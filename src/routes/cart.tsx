@@ -55,7 +55,7 @@ function CartPage() {
                         <span className="px-4 text-sm tabular-nums">{quantity}</span>
                         <button onClick={() => setQty(product.id, quantity + 1)} className="p-2 hover:bg-sand/40"><Plus className="w-3 h-3" /></button>
                       </div>
-                      <p className="font-display text-xl text-cocoa">${(product.price * quantity).toFixed(2)}</p>
+                      <p className="font-display text-xl text-cocoa">{formatINR(product.price * quantity)}</p>
                     </div>
                   </div>
                   <button onClick={() => remove(product.id)} className="self-start text-clay hover:text-cocoa">
