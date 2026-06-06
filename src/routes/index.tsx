@@ -40,21 +40,21 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative">
-        <div className="grid lg:grid-cols-12 min-h-screen">
-          <div className="lg:col-span-5 flex items-center px-6 lg:px-16 py-20 lg:py-0 order-2 lg:order-1">
+      <section className="relative h-screen">
+        <div className="grid lg:grid-cols-12 h-full">
+          <div className="lg:col-span-5 flex items-center px-6 lg:px-16 py-10 lg:py-0 order-2 lg:order-1">
             <div className="max-w-md animate-fade-up">
-              <p className="eyebrow mb-8">Autumn Edit · 2026</p>
-              <h1 className="font-display text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-cocoa">
+              <p className="eyebrow mb-6 lg:mb-8">Autumn Edit · 2026</p>
+              <h1 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-cocoa">
                 Beauty,
                 <br />
                 <em>Refined.</em>
               </h1>
-              <p className="mt-8 text-base leading-relaxed text-muted-foreground max-w-sm">
+              <p className="mt-6 lg:mt-8 text-base leading-relaxed text-muted-foreground max-w-sm">
                 A curated maison of skincare, fragrance and quiet luxury — composed
                 slowly, made to last a lifetime.
               </p>
-              <div className="mt-12 flex flex-wrap items-center gap-6">
+              <div className="mt-8 lg:mt-12 flex flex-wrap items-center gap-6">
                 <Link
                   to="/products"
                   className="group inline-flex items-center gap-3 bg-cocoa text-cream px-9 py-4 text-xs tracking-luxe uppercase hover:bg-clay transition-colors duration-500"
@@ -71,13 +71,13 @@ function Index() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 order-1 lg:order-2 relative">
+          <div className="lg:col-span-7 order-1 lg:order-2 relative h-[40vh] lg:h-full">
             <img
               src={heroImg}
               alt="Luxury skincare composition"
               width={1600}
               height={1920}
-              className="w-full h-[60vh] lg:h-full object-cover animate-fade-in"
+              className="w-full h-full object-cover animate-fade-in"
             />
           </div>
         </div>
