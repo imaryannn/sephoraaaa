@@ -4,6 +4,7 @@ import { Minus, Plus, X } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { useCart } from "@/lib/cart-context";
+import { formatINR } from "@/lib/products";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/cart")({
