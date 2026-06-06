@@ -40,11 +40,11 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative h-screen w-full overflow-hidden bg-cocoa">
+      <section className="relative h-[calc(100vh-7rem)] min-h-[600px] w-full overflow-hidden bg-cocoa">
         <img
           src={heroImg}
           alt="Luxury skincare composition"
-          className="absolute inset-0 w-full h-full object-cover object-center animate-fade-in"
+          className="absolute inset-0 w-full h-full object-cover object-top animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-cocoa/70 via-cocoa/30 to-transparent" />
         <div className="relative h-full flex items-center px-6 lg:px-16">
