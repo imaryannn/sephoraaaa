@@ -65,7 +65,7 @@ export function ProductCard({ product }: { product: Product }) {
           <span>·</span>
           <span>{product.reviews.toLocaleString()} reviews</span>
         </div>
-        <p className="text-sm pt-1 text-foreground">${product.price}</p>
+        <p className="text-sm pt-1 text-foreground">{formatINR(product.price)}</p>
       </div>
     </div>
   );
