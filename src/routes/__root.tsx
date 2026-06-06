@@ -76,6 +76,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "A maison of considered beauty. Skincare, makeup, fragrance and hair care, composed with restraint." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SEPHORA" },
+      { name: "twitter:title", content: "SEPHORA — Beauty, Refined." },
+      { name: "twitter:description", content: "A maison of considered beauty. Skincare, makeup, fragrance and hair care, composed with restraint." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5eae03db-c1ef-4153-afb4-5cc896c0f7a3/id-preview-51583747--cb592dad-118c-420c-b464-c4a0835ed8ab.lovable.app-1780730529830.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5eae03db-c1ef-4153-afb4-5cc896c0f7a3/id-preview-51583747--cb592dad-118c-420c-b464-c4a0835ed8ab.lovable.app-1780730529830.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
