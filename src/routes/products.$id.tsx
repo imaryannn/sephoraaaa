@@ -125,7 +125,7 @@ function ProductPage() {
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-4 text-xs text-clay">
-              <div className="flex flex-col items-start gap-2"><Truck className="w-4 h-4" /><span>Free shipping over $75</span></div>
+              <div className="flex flex-col items-start gap-2"><Truck className="w-4 h-4" /><span>Free shipping over ₹6,000</span></div>
               <div className="flex flex-col items-start gap-2"><Shield className="w-4 h-4" /><span>30-day returns</span></div>
               <div className="flex flex-col items-start gap-2"><Sparkles className="w-4 h-4" /><span>Two samples free</span></div>
             </div>
