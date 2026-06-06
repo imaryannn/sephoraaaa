@@ -41,7 +41,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative">
-        <div className="grid lg:grid-cols-12 min-h-[88vh]">
+        <div className="grid lg:grid-cols-12 min-h-screen">
           <div className="lg:col-span-5 flex items-center px-6 lg:px-16 py-20 lg:py-0 order-2 lg:order-1">
             <div className="max-w-md animate-fade-up">
               <p className="eyebrow mb-8">Autumn Edit · 2026</p>
