@@ -140,7 +140,7 @@ function CheckoutPage({ total, onPlaced }: { total: number; onPlaced: () => void
           <div className="border-t border-border pt-8 flex justify-between items-center">
             <div>
               <p className="eyebrow">Total</p>
-              <p className="font-display text-3xl text-cocoa">${total.toFixed(2)}</p>
+              <p className="font-display text-3xl text-cocoa">{formatINR(total)}</p>
             </div>
             <button type="submit" className="eyebrow bg-cocoa text-cream px-10 py-4 hover:bg-clay transition-colors duration-500">
               Place order
