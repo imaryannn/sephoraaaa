@@ -69,8 +69,9 @@ function CartPage() {
             <aside className="bg-sand/40 p-10 self-start">
               <p className="eyebrow mb-6">Summary</p>
               <div className="space-y-3 text-sm">
-                <div className="flex justify-between"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? "Complimentary" : `$${shipping.toFixed(2)}`}</span></div>
+                <div className="flex justify-between"><span>Subtotal</span><span>{formatINR(subtotal)}</span></div>
+                <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? "Complimentary" : formatINR(shipping)}</span></div>
+
                 <div className="flex justify-between"><span>Estimated tax</span><span>—</span></div>
               </div>
               <div className="border-t border-cocoa/20 my-6" />
