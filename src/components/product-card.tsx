@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Heart, Star } from "lucide-react";
-import type { Product } from "@/lib/products";
+import { type Product, formatINR } from "@/lib/products";
 import { useCart } from "@/lib/cart-context";
 import { toast } from "sonner";
 
@@ -65,7 +65,7 @@ export function ProductCard({ product }: { product: Product }) {
           <span>·</span>
           <span>{product.reviews.toLocaleString()} reviews</span>
         </div>
-        <p className="text-sm pt-1 text-foreground">${product.price}</p>
+        <p className="text-sm pt-1 text-foreground">{formatINR(product.price)}</p>
       </div>
     </div>
   );

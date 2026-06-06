@@ -40,9 +40,15 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative h-screen">
-        <div className="grid lg:grid-cols-12 h-full">
-          <div className="lg:col-span-5 flex items-center px-6 lg:px-16 py-10 lg:py-0 order-2 lg:order-1">
+      <section className="relative h-screen w-full overflow-hidden">
+        <img
+          src={heroImg}
+          alt="Luxury skincare composition"
+          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/40 to-transparent lg:from-cream/70 lg:via-cream/20" />
+        <div className="relative h-full grid lg:grid-cols-12">
+          <div className="lg:col-span-6 flex items-center px-6 lg:px-16 h-full">
             <div className="max-w-md animate-fade-up">
               <p className="eyebrow mb-6 lg:mb-8">Autumn Edit · 2026</p>
               <h1 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-cocoa">
@@ -50,7 +56,7 @@ function Index() {
                 <br />
                 <em>Refined.</em>
               </h1>
-              <p className="mt-6 lg:mt-8 text-base leading-relaxed text-muted-foreground max-w-sm">
+              <p className="mt-6 lg:mt-8 text-base leading-relaxed text-cocoa/80 max-w-sm">
                 A curated maison of skincare, fragrance and quiet luxury — composed
                 slowly, made to last a lifetime.
               </p>
@@ -71,17 +77,9 @@ function Index() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 order-1 lg:order-2 relative h-[40vh] lg:h-full">
-            <img
-              src={heroImg}
-              alt="Luxury skincare composition"
-              width={1600}
-              height={1920}
-              className="w-full h-full object-cover animate-fade-in"
-            />
-          </div>
         </div>
       </section>
+
 
       {/* Marquee */}
       <section className="border-y border-border py-5 overflow-hidden">

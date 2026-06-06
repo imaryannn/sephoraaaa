@@ -4,6 +4,7 @@ import { Minus, Plus, X } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { useCart } from "@/lib/cart-context";
+import { formatINR } from "@/lib/products";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/cart")({
@@ -54,7 +55,7 @@ function CartPage() {
                         <span className="px-4 text-sm tabular-nums">{quantity}</span>
                         <button onClick={() => setQty(product.id, quantity + 1)} className="p-2 hover:bg-sand/40"><Plus className="w-3 h-3" /></button>
                       </div>
-                      <p className="font-display text-xl text-cocoa">${(product.price * quantity).toFixed(2)}</p>
+                      <p className="font-display text-xl text-cocoa">{formatINR(product.price * quantity)}</p>
                     </div>
                   </div>
                   <button onClick={() => remove(product.id)} className="self-start text-clay hover:text-cocoa">
@@ -68,13 +69,14 @@ function CartPage() {
             <aside className="bg-sand/40 p-10 self-start">
               <p className="eyebrow mb-6">Summary</p>
               <div className="space-y-3 text-sm">
-                <div className="flex justify-between"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? "Complimentary" : `$${shipping.toFixed(2)}`}</span></div>
+                <div className="flex justify-between"><span>Subtotal</span><span>{formatINR(subtotal)}</span></div>
+                <div className="flex justify-between"><span>Shipping</span><span>{shipping === 0 ? "Complimentary" : formatINR(shipping)}</span></div>
+
                 <div className="flex justify-between"><span>Estimated tax</span><span>—</span></div>
               </div>
               <div className="border-t border-cocoa/20 my-6" />
               <div className="flex justify-between font-display text-2xl text-cocoa">
-                <span>Total</span><span>${total.toFixed(2)}</span>
+                <span>Total</span><span>{formatINR(total)}</span>
               </div>
               <button
                 onClick={() => setCheckout(true)}
@@ -138,7 +140,7 @@ function CheckoutPage({ total, onPlaced }: { total: number; onPlaced: () => void
           <div className="border-t border-border pt-8 flex justify-between items-center">
             <div>
               <p className="eyebrow">Total</p>
-              <p className="font-display text-3xl text-cocoa">${total.toFixed(2)}</p>
+              <p className="font-display text-3xl text-cocoa">{formatINR(total)}</p>
             </div>
             <button type="submit" className="eyebrow bg-cocoa text-cream px-10 py-4 hover:bg-clay transition-colors duration-500">
               Place order

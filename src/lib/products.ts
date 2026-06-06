@@ -137,3 +137,6 @@ export const products: Product[] = [
 ];
 
 export const getProduct = (id: string) => products.find((p) => p.id === id);
+
+export const formatINR = (usd: number) =>
+  `₹${Math.round(usd * 83).toLocaleString("en-IN")}`;

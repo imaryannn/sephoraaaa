@@ -4,7 +4,7 @@ import { Heart, Minus, Plus, Star, Truck, Shield, Sparkles } from "lucide-react"
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
-import { getProduct, products } from "@/lib/products";
+import { getProduct, products, formatINR } from "@/lib/products";
 import { useCart } from "@/lib/cart-context";
 import { toast } from "sonner";
 
@@ -90,7 +90,7 @@ function ProductPage() {
               <span>{product.rating} · {product.reviews.toLocaleString()} reviews</span>
             </div>
 
-            <p className="font-display text-3xl mt-8 text-cocoa">${product.price}</p>
+            <p className="font-display text-3xl mt-8 text-cocoa">{formatINR(product.price)}</p>
 
             <p className="mt-8 text-base text-muted-foreground leading-relaxed">
               {product.description}
@@ -125,7 +125,7 @@ function ProductPage() {
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-4 text-xs text-clay">
-              <div className="flex flex-col items-start gap-2"><Truck className="w-4 h-4" /><span>Free shipping over $75</span></div>
+              <div className="flex flex-col items-start gap-2"><Truck className="w-4 h-4" /><span>Free shipping over ₹6,000</span></div>
               <div className="flex flex-col items-start gap-2"><Shield className="w-4 h-4" /><span>30-day returns</span></div>
               <div className="flex flex-col items-start gap-2"><Sparkles className="w-4 h-4" /><span>Two samples free</span></div>
             </div>
