@@ -76,7 +76,7 @@ function CartPage() {
               </div>
               <div className="border-t border-cocoa/20 my-6" />
               <div className="flex justify-between font-display text-2xl text-cocoa">
-                <span>Total</span><span>${total.toFixed(2)}</span>
+                <span>Total</span><span>{formatINR(total)}</span>
               </div>
               <button
                 onClick={() => setCheckout(true)}
