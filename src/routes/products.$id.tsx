@@ -4,7 +4,7 @@ import { Heart, Minus, Plus, Star, Truck, Shield, Sparkles } from "lucide-react"
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
-import { getProduct, products } from "@/lib/products";
+import { getProduct, products, formatINR } from "@/lib/products";
 import { useCart } from "@/lib/cart-context";
 import { toast } from "sonner";
 
