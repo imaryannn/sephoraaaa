@@ -40,16 +40,13 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Luxury skincare composition"
-          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/40 to-transparent lg:from-cream/70 lg:via-cream/20" />
-        <div className="relative h-full grid lg:grid-cols-12">
-          <div className="lg:col-span-6 flex items-center px-6 lg:px-16 h-full">
-            <div className="max-w-md animate-fade-up">
+      <section className="relative h-screen w-full overflow-hidden bg-cream">
+        <div className="grid lg:grid-cols-12 h-full">
+          {/* Text — overlay on mobile, column on desktop */}
+          <div className="lg:col-span-5 lg:relative absolute inset-0 lg:inset-auto z-10 flex items-center px-6 lg:px-16 h-full">
+            {/* Mobile-only soft scrim for legibility */}
+            <div className="lg:hidden absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/50 to-transparent" />
+            <div className="relative max-w-md animate-fade-up">
               <p className="eyebrow mb-6 lg:mb-8">Autumn Edit · 2026</p>
               <h1 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-cocoa">
                 Beauty,
@@ -77,8 +74,17 @@ function Index() {
               </div>
             </div>
           </div>
+          {/* Image — full bleed on mobile, right column on desktop */}
+          <div className="lg:col-span-7 absolute inset-0 lg:relative lg:inset-auto h-full">
+            <img
+              src={heroImg}
+              alt="Luxury skincare composition"
+              className="w-full h-full object-cover animate-fade-in"
+            />
+          </div>
         </div>
       </section>
+
 
 
       {/* Marquee */}
