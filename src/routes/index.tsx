@@ -44,7 +44,7 @@ function Index() {
         <img
           src={heroImg}
           alt="Luxury skincare composition"
-          className="absolute inset-0 w-full h-full object-contain animate-fade-in"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-cocoa/70 via-cocoa/30 to-transparent" />
         <div className="relative h-full flex items-center px-6 lg:px-16">
