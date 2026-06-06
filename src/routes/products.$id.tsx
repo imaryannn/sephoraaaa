@@ -90,7 +90,7 @@ function ProductPage() {
               <span>{product.rating} · {product.reviews.toLocaleString()} reviews</span>
             </div>
 
-            <p className="font-display text-3xl mt-8 text-cocoa">${product.price}</p>
+            <p className="font-display text-3xl mt-8 text-cocoa">{formatINR(product.price)}</p>
 
             <p className="mt-8 text-base text-muted-foreground leading-relaxed">
               {product.description}
