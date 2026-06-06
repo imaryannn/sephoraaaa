@@ -48,7 +48,7 @@ function Index() {
               <h1 className="font-display text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-cocoa">
                 Beauty,
                 <br />
-                <em className="not-italic">Refined.</em>
+                <em>Refined.</em>
               </h1>
               <p className="mt-8 text-base leading-relaxed text-muted-foreground max-w-sm">
                 A curated maison of skincare, fragrance and quiet luxury — composed

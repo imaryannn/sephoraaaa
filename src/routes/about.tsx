@@ -23,7 +23,7 @@ function About() {
       <section className="px-6 lg:px-12 py-28 lg:py-40 max-w-[1100px] mx-auto text-center">
         <p className="eyebrow mb-6">Est. Paris, 1969</p>
         <h1 className="font-display text-5xl md:text-7xl text-cocoa leading-[1.05]">
-          A quiet pursuit of <em className="not-italic">beauty</em>.
+          A quiet pursuit of <em>beauty</em>.
         </h1>
         <p className="mt-10 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           For over fifty years, SEPHORA has composed beauty as one would compose
