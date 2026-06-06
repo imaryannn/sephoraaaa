@@ -99,7 +99,7 @@ function ProductsPage() {
             onChange={(e) => setMax(Number(e.target.value))}
             className="flex-1 max-w-xs accent-cocoa"
           />
-          <span>${max}</span>
+          <span>{formatINR(max)}</span>
         </div>
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-16">
